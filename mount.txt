@@ -1,0 +1,3 @@
+funnction  mouse(name){
+day la test mouse
+hahahahah 1kekkk

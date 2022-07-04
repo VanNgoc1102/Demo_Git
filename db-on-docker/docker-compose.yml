@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+#mysql
+  mysql-dev:
+    image: mysql:8.0.29
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: sql-comments
+    ports:
+      - "3309:3306"
+#adminer
+  admin:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+    
+    
+
+    #image: mysql:8.0.29
+    #depends_on:
+      #- mysql-dev
+    #command: mysql -uroot -ppassword -hmysql-dev sql-comments
+  

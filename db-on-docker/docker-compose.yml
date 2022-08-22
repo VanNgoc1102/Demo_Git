@@ -2,13 +2,13 @@ version: '3.1'
 
 services:
 #mysql
-  my-dev:
+  mysql-dev:
     image: mysql:8.0.29
     environment:
-      MYSQL_ROOT_PASSWORD: 110202
-      MYSQL_DATABASE: comments
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: sql-comments
     ports:
-      - "3307:3306"
+      - "3309:3306"
 #adminer
   admin:
     image: adminer

@@ -23,10 +23,12 @@ class Employee:
 emp_1 = Employee("Ngoc", "Van", 2002)
 emp_2 = Employee("phong", "an", 2003)
 
-Employee.set_raise_amt(1.11)
+emp_str_1 = 'le-dat-1000'
+emp_str_2 = 'hoang-thai-3000'
+emp_str_3 = 'van-huy-7262'
 
-print(Employee.num_of_emps)
+first, last, pay =emp_str_1.split('-')
+new_emp_1 = Employee(first, last, pay)
 
-print(Employee.raise_amt)
-print(emp_1.raise_amt)
-print(emp_2.raise_amt)
+print(new_emp_1.email)
+print(new_emp_1.pay)

@@ -31,17 +31,16 @@ class Employee:
             return False
         return True
 
-import datetime
-my_date = datetime.date(2022, 11, 23)
+class Developer(Employee):
+    pass
 
-print(Employee.is_workday(my_date))
 
-emp_1 = Employee("Ngoc", "Van", 2002)
-emp_2 = Employee("phong", "an", 2003)
 
-emp_str_1 = 'le-dat-1000'
+dev_1 = Developer("Ngoc", "Van", 2002)
+dev_2 = Developer("phong", "an", 2003)
 
-new_emp_1 = Employee.from_string(emp_str_1)
 
-print(new_emp_1.email)
-print(new_emp_1.pay)
+print(dev_1.pay)
+print(dev_1.email)
+dev_1.apply_raise()
+print(dev_1.pay)

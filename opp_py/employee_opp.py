@@ -32,15 +32,17 @@ class Employee:
         return True
 
 class Developer(Employee):
-    pass
+    raise_amt = 1.10
+
+    def __init__(self, first, last, pay, prog_lang):
+        super().__init__(first, last, pay)
+        self.prog_lang = prog_lang
 
 
 
-dev_1 = Developer("Ngoc", "Van", 2002)
-dev_2 = Developer("phong", "an", 2003)
+dev_1 = Developer("Ngoc", "Van", 2000, 'Python')
+dev_2 = Developer("phong", "an", 3000, 'C++')
 
 
 print(dev_1.pay)
-print(dev_1.email)
-dev_1.apply_raise()
-print(dev_1.pay)
+print(dev_1.prog_lang)

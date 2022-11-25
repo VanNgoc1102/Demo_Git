@@ -16,6 +16,18 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amt)
     
+    def __repr__(self):
+        return("Employee('{}', '{}', {})".format(self.first, self.last, self.pay))
+
+    def __str__(self):
+        return('{} - {}'.format(self.fullname(),self.email))
+
+    def __add__(self, other):
+        return self.pay + other.pay
+
+    def __len__(self):
+        return len(self.fullname())
+
     @classmethod
     def set_raise_amt(cls, amount):
         cls.raise_amt = amount
@@ -58,15 +70,25 @@ class Manager(Employee):
 
     def print_emps(self):
         for emp in self.employees:
-            print('--->', emp.fullname())
+            print('-->', emp.fullname())
 
 
 dev_1 = Developer("Ngoc", "Van", 2000, 'Python')
 dev_2 = Developer("phong", "an", 3000, 'C++')
 
 mgr_1 = Manager("sue", "alex", 900, [dev_1])
-print(mgr_1.email)
 
-mgr_1.add_emp(dev_2)
-mgr_1.remove_emp(dev_1)
-mgr_1.print_emps()
+emp_1 = Employee('viet', 'nam', 5000)
+emp_2 = Employee('ha', 'noi', 2900)
+
+print(emp_1)
+print(repr(emp_1)) # = print(emp_1.__repr__())
+
+print(str(emp_1)) # = print(emp_1.__str__())
+
+print(int.__add__(1,2))
+print(str.__add__('a','b'))
+print(emp_1+emp_2)
+
+print('test'.__len__())
+print(emp_1.__len__())

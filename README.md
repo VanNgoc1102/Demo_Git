@@ -1,1 +1,1 @@
-Demo_Git
+Face_Recognition project

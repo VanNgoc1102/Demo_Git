@@ -1,2 +1,3 @@
-from adder import add
-result =adder.add(2,3)
+import datetime
+
+print(datetime.date)
